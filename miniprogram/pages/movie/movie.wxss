@@ -1,0 +1,51 @@
+.movie{
+  height: 300rpx;
+  display: flex;
+  padding: 10px;
+  border-bottom: .5px solid #ccc;
+}
+.movie-img{
+  height: 100%;
+  width: 200rpx;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.movie-info{
+  flex: 5;
+}
+.movie-title{
+  color: #000;
+  width: 130%;
+  font-size: 35rpx;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+.movie-score{
+  color: #ffaf00;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+.movie-directors,
+.movie-casts{
+  width: 280rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+}
+.movie-com{
+  font-size: 30rpx;
+}
+.movie-comment{
+  flex: 1;
+  top: 50%;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, -50%);
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30px;
+  background-color: #d81e06;
+  color: #fff;
+}

@@ -1,0 +1,49 @@
+<view class="main">
+  <view class="detail-container" style="background: url({{ detail.images.large }}) no-repeat top/cover"></view>
+  <view class="detail-mask"></view>
+  <view class="detail-main">
+      <image class="detial-img" src="{{ detail.images.large }}"></image>
+      <view class="detail-info">
+        <view class="detail-title">{{ detail.title }}</view>
+        <view>评分：<text class="detail-score">{{ detail.rating.average }}</text></view>
+        <view class="detail-directors">导演：{{ detail.directors[0].name }}</view>
+        <view class="detail-casts">主演：<text wx:for="{{ detail.casts }}" wx:key="index">{{ item.name }} </text></view>
+        <view class="detail-pubdate">上映：{{ detail.mainland_pubdate }}</view>
+      </view>
+      <view class="detail-summary-content">剧情简介：
+        <view class="detail-summary">{{ detail.summary }}</view>
+      </view>
+  </view>
+  <view class="movie-dsc">
+    <van-cell-group>
+      <van-field 
+        type="textarea"
+        autosize="{ maxHeight: 50}"
+        custom-style="font-size: 30rpx; padding: 5px; width: 95%;height: 200rpx; margin: 0 auto;border-radius: 8px"
+        value="{{ value }}"
+        placeholder="写一些观后感吧！"
+        border="{{ false }}"
+        bind:change="onDscChange"
+      />
+    </van-cell-group>
+  </view>
+
+  <view class="img-list">
+    <view class="upload-img" wx:for="{{ fileList }}" wx:key="index">
+      <view class="del-btn" data-index="{{ index }}" bindtap="delImg"><van-icon color="#ccc" name="clear" size="30rpx" custom-style="margin-top: 10rpx"/> </view>
+      <image class="preview-img" src="{{ item.url }}"></image>
+    </view> 
+    <view class="img-btn">
+      <van-button bindtap="upLoadImg" color = "#fff" custom-style = "font-size: 20rpx; color: #dbdbdb; width: 180rpx; height: 180rpx;border-radius: 8px"> 
+        <van-icon color="#bfbfbf" size="80rpx" name="photo-o" />
+      </van-button>
+    </view>
+  </view>
+
+  <view class="movie-rate">评分：
+    <van-rate value="{{ content }}" count="{{ 5 }}" bind:change="onRateChange" />
+  </view>
+  <view class="movie-submit">
+    <van-button bindtap="submit" color="#d81e06" type="default" block custom-style="width: 100%; font-size: 35rpx">提交</van-button>
+  </view>
+</view>
