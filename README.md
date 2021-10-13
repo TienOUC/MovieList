@@ -1,10 +1,10 @@
 ### 1. 注意事项
 
-API接口可能会发生变动，请自行查找最新可用API
+- API接口可能会发生变动，请自行查找最新可用API
 
 ### 2. 学习笔记
 
-[笔记链接](https://www.dodolo.top/pages/miniprogram/mini-program.html)
+- [:link:笔记链接](https://www.dodolo.top/pages/miniprogram/mini-program.html)
 
 ### 3. 效果演示
 
