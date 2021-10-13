@@ -1,3 +1,6 @@
+## 学习笔记
+[链接](https://www.dodolo.top/pages/miniprogram/mini-program.html)
+
 ## 效果演示
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfl510ux13g308s0fwnp9.gif)
